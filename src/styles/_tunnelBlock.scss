@@ -1,0 +1,29 @@
+.tunnelBlock__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(15);
+  padding: var(--layout-padding);
+
+  &--item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    padding: var(--tunnel-card-padding);
+    height: rem(200);
+    color: color(white);
+    background-color: color(secondaryDark);
+
+    &--name {
+      font-size: rem(40);
+    }
+
+    &--fee {
+      font-size: rem(30);
+    }
+
+    &--distance {
+      font-size: rem(25);
+    }
+  }
+}

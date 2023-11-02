@@ -1,0 +1,22 @@
+.button {
+  background-color: #fff;
+  border: rem(1) solid #ccc;
+  border-radius: rem(4);
+  color: #333;
+  cursor: pointer;
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  padding: rem(6) rem(12);
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+
+  &.disabled {
+    -webkit-tap-highlight-color: transparent;
+    background-color: #848484;
+  }
+}

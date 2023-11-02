@@ -1,0 +1,32 @@
+.commonStatusDotStyle {
+  width: rem(10);
+  height: rem(10);
+  border-radius: 50%;
+}
+
+.home__wrapper {
+  position: relative;
+  overflow: auto;
+  height: 100%;
+
+  &.freeze {
+    overflow: hidden;
+  }
+
+  &--permissionStatus {
+    position: fixed;
+    top: rem(8);
+    right: rem(8);
+    z-index: 101;
+
+    &.status-dot-green {
+      @extend .commonStatusDotStyle;
+      background-color: color(mainGreen);
+    }
+
+    &.status-dot-red {
+      @extend .commonStatusDotStyle;
+      background-color: color(mainRed);
+    }
+  }
+}

@@ -1,0 +1,20 @@
+$allColors: (
+  mainDark: #1a1a1a,
+  secondaryDark: #333333,
+  mainRed: #ff0000,
+  mainGreen: #00ff00,
+  trafficSignRed: #de002a,
+
+  black: #000000,
+  white: #FFFFFF,
+);
+
+@function color($key) {
+  @if map-has-key($allColors, $key) {
+    $color: map-get($allColors, $key);
+    @return $color;
+  }
+
+  @warn "unknown color `#{$key}` in variables";
+  @return null;
+}

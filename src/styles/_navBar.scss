@@ -1,0 +1,29 @@
+.navBar__wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: rem(0) rem(20);
+  background: linear-gradient(color(secondaryDark), color(black));
+  box-shadow: inset rem(0) rem(3) rem(20) rem(0) color(mainDark);
+  height: rem(70);
+
+  &--navItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: color(white);
+    text-decoration: none;
+    font-size: rem(19);
+
+    &.router-link-exact-active {
+      background: radial-gradient(
+        circle,
+        color(mainDark) 0%,
+        color(secondaryDark) 0%,
+        color(black) 200%
+      );
+    }
+  }
+}

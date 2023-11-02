@@ -1,0 +1,59 @@
+.toggleSwitch {
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  display: inline-block;
+  width: rem(60);
+  height: rem(34);
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:checked + .toggleSwitch--slider {
+      background-color: #2196f3;
+
+      &:before {
+        -webkit-transform: translateX(rem(26));
+        -ms-transform: translateX(rem(26));
+        transform: translateX(rem(26));
+      }
+    }
+
+    &:focus + .toggleSwitch--slider {
+      box-shadow: 0 0 1px #2196f3;
+    }
+  }
+
+  &--slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+
+    &--round {
+      border-radius: rem(34);
+
+      &:before {
+        border-radius: 50%;
+      }
+    }
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: rem(26);
+      width: rem(26);
+      left: rem(4);
+      bottom: rem(4);
+      background-color: white;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+  }
+}
